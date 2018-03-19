@@ -69,7 +69,7 @@
                             <a href="product.php" class="dropdown-toggle" data-toggle="dropdown">Menu <b class="caret"></b></a>
                             <ul class="dropdown-menu multi-column columns-3">
                                 <div class="row">
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-6">
                                         <ul class="multi-column-dropdown">
                                             <h6><a href="category.php">Food type</a></h6>
                                             <?php
@@ -83,7 +83,7 @@
 
                                         </ul>
                                     </div>
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-6">
                                         <ul class="multi-column-dropdown">
                                             <h6><a href="allcuisine.php">Cuisine</a></h6>
                                             <?php
@@ -92,19 +92,6 @@
                                             $res = mysqli_query($conn, $qu) or die(mysqli_error($conn));
                                             while ($ans = mysqli_fetch_array($res)) {
                                                 echo "<li><a href='product.php?cuid=$ans[0]'>$ans[1]</a></li>";
-                                            }
-                                            ?>
-                                        </ul>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <ul class="multi-column-dropdown">
-                                            <h6><a href="combo.php">Combo Packs</a></h6>
-                                            <?php
-                                            include_once("connect.php");
-                                            $qu = "select * from combopack order by rand() limit 4";
-                                            $res = mysqli_query($conn, $qu) or die(mysqli_error($conn));
-                                            while ($ans = mysqli_fetch_array($res)) {
-                                                echo "<li><a href='combo.php?cuid=$ans[0]'>$ans[1]</a></li>";
                                             }
                                             ?>
                                         </ul>

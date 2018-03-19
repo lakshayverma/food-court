@@ -29,18 +29,5 @@
             </ul>
         </div>
         <div class="clearfix"> </div>
-        <div class="sidebar-row">
-            <h4>All Combo</h4>
-            <ul>
-                <?php
-                include_once("connect.php");
-                $qu="select * from combopack";
-                $res=mysqli_query($conn, $qu) or die(mysqli_error($conn));
-                while ($ans=mysqli_fetch_array($res)) {
-                    print "<li><a href='combo.php?cuid=$ans[0]'>$ans[1]</a></li>";
-                }
-                ?>
-            </ul>
-        </div>
     </div>
 </div>
