@@ -4,29 +4,29 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Staple Food a Restaurants Category Bootstrap Responsive website Template | Home :: w3layouts</title>
+        <title>Sunny Side Up Bakery  | Home </title>
         <?php
         include_once("files.php");
         ?>
     </head>
-    <body> 
+    <body>
         <!-- banner -->
         <div class="banner">
             <!-- header -->
             <?php
             include_once("header.php");
             ?>
-            <!-- //header-end --> 
+            <!-- //header-end -->
             <!-- banner-text -->
-            <div class="banner-text">	
+            <div class="banner-text">
                 <div class="container">
                     <h2>Delicious food from the <br> <span>Best Chefs For you.</span></h2>
                 </div>
             </div>
         </div>
-        <!-- //banner -->   
+        <!-- //banner -->
         <!-- add-products -->
-        <div class="add-products">  
+        <div class="add-products">
             <div class="container">
                 <div class="add-products-row">
                     <?php
@@ -44,51 +44,51 @@ session_start();
                         <?php
                     }
                     ?>
-                    <div class="clearfix"> </div> 
-                </div>  	 
+                    <div class="clearfix"> </div>
+                </div>
             </div>
         </div>
-        <!-- //add-products --> 
-        <!-- order -->   	
-        <div class="wthree-order">  
+        <!-- //add-products -->
+        <!-- order -->
+        <div class="wthree-order">
             <img src="images/i2.jpg" class="w3order-img" alt=""/>
             <div class="container">
                 <h3 class="w3ls-title">How To Order Online Food</h3>
                 <p class="w3lsorder-text">Get your favourite food in 4 simple steps.</p>
-                <div class="order-agileinfo">  
-                    <div class="col-md-3 col-sm-3 col-xs-6 order-w3lsgrids"> 
-                        <div class="order-w3text"> 
-                            <i class="fa fa-map" aria-hidden="true"></i> 
+                <div class="order-agileinfo">
+                    <div class="col-md-3 col-sm-3 col-xs-6 order-w3lsgrids">
+                        <div class="order-w3text">
+                            <i class="fa fa-map" aria-hidden="true"></i>
                             <h5>Search Menu</h5>
                             <span>1</span>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-3 col-xs-6 order-w3lsgrids"> 
-                        <div class="order-w3text"> 
-                            <i class="fa fa-cutlery" aria-hidden="true"></i> 
+                    <div class="col-md-3 col-sm-3 col-xs-6 order-w3lsgrids">
+                        <div class="order-w3text">
+                            <i class="fa fa-cutlery" aria-hidden="true"></i>
                             <h5>Choose Food</h5>
                             <span>2</span>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-3 col-xs-6 order-w3lsgrids"> 
-                        <div class="order-w3text"> 
+                    <div class="col-md-3 col-sm-3 col-xs-6 order-w3lsgrids">
+                        <div class="order-w3text">
                             <i class="fa fa-credit-card" aria-hidden="true"></i>
                             <h5>Pay Money</h5>
                             <span>3</span>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-3 col-xs-6 order-w3lsgrids"> 
-                        <div class="order-w3text"> 
+                    <div class="col-md-3 col-sm-3 col-xs-6 order-w3lsgrids">
+                        <div class="order-w3text">
                             <i class="fa fa-truck" aria-hidden="true"></i>
                             <h5>Enjoy Food</h5>
                             <span>4</span>
                         </div>
                     </div>
-                    <div class="clearfix"> </div> 
+                    <div class="clearfix"> </div>
                 </div>
             </div>
         </div>
-        <!-- //order -->    
+        <!-- //order -->
         <!-- deals -->
         <div class="w3agile-deals">
             <div class="container">
@@ -97,21 +97,21 @@ session_start();
                     <div class="col-md-6 col-sm-6 deals-grids">
                         <div class="deals-left">
                             <i class="fa fa-truck" aria-hidden="true"></i>
-                        </div> 
+                        </div>
                         <div class="deals-right">
                             <h4>CASH ON DELIVERY</h4>
                             <p>We have a facilty to take order online and deliver food at your given location</p>
-                        </div> 
+                        </div>
                         <div class="clearfix"> </div>
-                    </div> 
+                    </div>
                     <div class="col-md-6 col-sm-6 deals-grids">
                         <div class="deals-left">
                             <i class="fa fa-birthday-cake" aria-hidden="true"></i>
-                        </div> 
+                        </div>
                         <div class="deals-right">
                             <h4>Party Orders</h4>
                             <p>We also arrage order for parties, kities and ceremonies</p>
-                        </div> 
+                        </div>
                         <div class="clearfix"> </div>
                     </div>
 
@@ -119,7 +119,7 @@ session_start();
                 </div>
             </div>
         </div>
-        <!-- //deals --> 
+        <!-- //deals -->
         <!-- dishes -->
         <div class="w3agile-spldishes">
             <div class="container">
@@ -130,7 +130,7 @@ session_start();
                         <p>
                             The <strong>best</strong> of <em>Staples</em>, curated here by our master chefs. Dive right in and get the best offers.
                         </p>
-                    </div> 
+                    </div>
                     <div class="col-md-9 spldishes-grids">
                         <!-- Owl-Carousel -->
                         <div id="owl-demo" class="owl-carousel text-center agileinfo-gallery-row">
@@ -149,14 +149,14 @@ session_start();
                                 <?php
                             }
                             ?>
-                        </div> 
-                    </div>  
+                        </div>
+                    </div>
                     <div class="clearfix"> </div>
                 </div>
             </div>
         </div>
         <?php include_once("footer.php"); ?>
-        <!-- //footer --> 
+        <!-- //footer -->
         <!-- cart-js -->
         <script src="js/minicart.js"></script>
         <script>
@@ -172,8 +172,8 @@ session_start();
                     }
                 }
             });
-        </script>  
-        <!-- //cart-js -->	
+        </script>
+        <!-- //cart-js -->
         <!-- Owl-Carousel-JavaScript -->
         <script src="js/owl.carousel.js"></script>
         <script>
@@ -186,11 +186,11 @@ session_start();
                 });
             });
         </script>
-        <!-- //Owl-Carousel-JavaScript -->  
+        <!-- //Owl-Carousel-JavaScript -->
         <!-- start-smooth-scrolling -->
-        <script src="js/SmoothScroll.min.js"></script>  
+        <script src="js/SmoothScroll.min.js"></script>
         <script type="text/javascript" src="js/move-top.js"></script>
-        <script type="text/javascript" src="js/easing.js"></script>	
+        <script type="text/javascript" src="js/easing.js"></script>
         <script type="text/javascript">
             jQuery(document).ready(function ($) {
                 $(".scroll").click(function (event) {
@@ -200,7 +200,7 @@ session_start();
                 });
             });
         </script>
-        <!-- //end-smooth-scrolling -->	  
+        <!-- //end-smooth-scrolling -->
         <!-- smooth-scrolling-of-move-up -->
         <script type="text/javascript">
             $(document).ready(function () {
@@ -209,7 +209,7 @@ session_start();
                  containerID: 'toTop', // fading element id
                  containerHoverID: 'toTopHover', // fading element hover id
                  scrollSpeed: 1200,
-                 easingType: 'linear' 
+                 easingType: 'linear'
                  };
                  */
 
@@ -217,7 +217,7 @@ session_start();
 
             });
         </script>
-        <!-- //smooth-scrolling-of-move-up --> 
+        <!-- //smooth-scrolling-of-move-up -->
         <!-- Bootstrap core JavaScript
     ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
