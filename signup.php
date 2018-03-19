@@ -10,7 +10,7 @@ if (isset($_POST["s1"])) {
             include "connect.php";
             $query = "insert into signup(name,email,pass,phno,utype) values('$name','$email','$pass','$phno','normal')";
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
-            
+
             session_start();
             //mysqli_close($conn);
             $_SESSION["name"] = $name;
@@ -29,7 +29,7 @@ if (isset($_POST["s1"])) {
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Staple Food a Restaurants Category Bootstrap Responsive website Template | Sign Up</title>
+        <title>Sunny Side Up Bakery  | Sign Up</title>
         <?php include_once("files.php"); ?>
         <script type="text/javascript">
             function abc()
@@ -71,7 +71,7 @@ if (isset($_POST["s1"])) {
             }
         </script>
     </head>
-    <body> 
+    <body>
         <!-- banner -->
         <div class="banner about-w3bnr">
             <?php
@@ -81,11 +81,11 @@ if (isset($_POST["s1"])) {
             include_once("banner.php");
             ?>
         </div>
-        <!-- //banner -->    
-        <!-- breadcrumb -->  
-        <div class="container">	
+        <!-- //banner -->
+        <!-- breadcrumb -->
+        <div class="container">
             <ol class="breadcrumb w3l-crumbs">
-                <li><a href="#"><i class="fa fa-home"></i> Home</a></li> 
+                <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
                 <li class="active">Sign Up</li>
             </ol>
         </div>
@@ -93,65 +93,66 @@ if (isset($_POST["s1"])) {
         <!-- sign up-page -->
         <div class="login-page about">
             <img class="login-w3img" src="images/img3.jpg" alt="">
-            <div class="container"> 
-                <h3 class="w3ls-title w3ls-title1">Sign Up to your account</h3>  
-                <div class="login-agileinfo"> 
-                    <form name="form1" method="post"> 
+            <div class="container">
+                <h3 class="w3ls-title w3ls-title1">Sign Up to your account</h3>
+                <div class="login-agileinfo">
+                    <form name="form1" method="post">
                         <input class="agile-ltext" type="text" name="name" placeholder="Username">
                         <input class="agile-ltext" type="email" name="email" placeholder="Your Email">
                         <input class="agile-ltext" type="password" name="pass" placeholder="Password">
                         <input class="agile-ltext" type="password" name="cpass" placeholder="Confirm Password">
                         <input class="agile-ltext" type="text" name="phno" placeholder="Phone No">
-                        <div class="wthreelogin-text"> 
-                            <ul> 
+                        <div class="wthreelogin-text">
+                            <ul>
                                 <li>
-                                    <label class="checkbox"><input type="checkbox" name="c1"><i></i> 
-                                        <span> I agree to the terms of service</span> 
-                                    </label> 
-                                </li> 
+                                    <label class="checkbox"><input type="checkbox" name="c1"><i></i>
+                                        <span> I agree to the terms of service</span>
+                                    </label>
+                                </li>
                             </ul>
                             <div class="clearfix"> </div>
-                        </div>   
+                        </div>
                         <input type="submit" value="Sign Up" name="s1" onClick="return abc();">
                     </form>
                     <?php
-                    if (isset($msg))
+                    if (isset($msg)) {
                         print $msg;
+                    }
                     ?>
-                    <p>Already have an account?  <a href="login.php" onClick="abc();"> Login Now!</a></p> 
-                </div>	 
+                    <p>Already have an account?  <a href="login.php" onClick="abc();"> Login Now!</a></p>
+                </div>
             </div>
         </div>
-        <!-- //sign up-page -->  
+        <!-- //sign up-page -->
         <!-- subscribe -->
-        <div class="subscribe agileits-w3layouts"> 
+        <div class="subscribe agileits-w3layouts">
             <div class="container">
                 <div class="col-md-6 social-icons w3-agile-icons">
-                    <h4>Keep in touch</h4>  
+                    <h4>Keep in touch</h4>
                     <ul>
                         <li><a href="#" class="fa fa-facebook icon facebook"> </a></li>
                         <li><a href="#" class="fa fa-twitter icon twitter"> </a></li>
                         <li><a href="#" class="fa fa-google-plus icon googleplus"> </a></li>
                         <li><a href="#" class="fa fa-dribbble icon dribbble"> </a></li>
-                        <li><a href="#" class="fa fa-rss icon rss"> </a></li> 
-                    </ul> 
-                    <ul class="apps"> 
+                        <li><a href="#" class="fa fa-rss icon rss"> </a></li>
+                    </ul>
+                    <ul class="apps">
                         <li><h4>Download Our app : </h4> </li>
                         <li><a href="#" class="fa fa-apple"></a></li>
                         <li><a href="#" class="fa fa-windows"></a></li>
                         <li><a href="#" class="fa fa-android"></a></li>
-                    </ul> 
-                </div> 
+                    </ul>
+                </div>
                 <div class="col-md-6 subscribe-right">
-                    <h3 class="w3ls-title">Subscribe to Our <br><span>Newsletter</span></h3>  
-                    <form action="#" method="post"> 
+                    <h3 class="w3ls-title">Subscribe to Our <br><span>Newsletter</span></h3>
+                    <form action="#" method="post">
                         <input type="email" name="email" placeholder="Enter your Email..." required>
                         <input type="submit" value="Subscribe">
-                        <div class="clearfix"> </div> 
-                    </form> 
+                        <div class="clearfix"> </div>
+                    </form>
                     <img src="images/i1.png" class="sub-w3lsimg" alt=""/>
                 </div>
-                <div class="clearfix"> </div> 
+                <div class="clearfix"> </div>
             </div>
         </div>
         <?php
@@ -171,12 +172,12 @@ if (isset($_POST["s1"])) {
                                 }
                             }
                         });
-        </script> 
-        <!-- //cart-js -->	
+        </script>
+        <!-- //cart-js -->
         <!-- start-smooth-scrolling -->
-        <script src="js/SmoothScroll.min.js"></script>  
+        <script src="js/SmoothScroll.min.js"></script>
         <script type="text/javascript" src="js/move-top.js"></script>
-        <script type="text/javascript" src="js/easing.js"></script>	
+        <script type="text/javascript" src="js/easing.js"></script>
         <script type="text/javascript">
                         jQuery(document).ready(function ($) {
                             $(".scroll").click(function (event) {
@@ -186,7 +187,7 @@ if (isset($_POST["s1"])) {
                             });
                         });
         </script>
-        <!-- //end-smooth-scrolling -->	  
+        <!-- //end-smooth-scrolling -->
         <!-- smooth-scrolling-of-move-up -->
         <script type="text/javascript">
             $(document).ready(function () {
@@ -195,7 +196,7 @@ if (isset($_POST["s1"])) {
                  containerID: 'toTop', // fading element id
                  containerHoverID: 'toTopHover', // fading element hover id
                  scrollSpeed: 1200,
-                 easingType: 'linear' 
+                 easingType: 'linear'
                  };
                  */
 
@@ -203,7 +204,7 @@ if (isset($_POST["s1"])) {
 
             });
         </script>
-        <!-- //smooth-scrolling-of-move-up --> 
+        <!-- //smooth-scrolling-of-move-up -->
         <!-- Bootstrap core JavaScript
     ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
