@@ -23,12 +23,12 @@ if (isset($_POST["s1"])) {
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Staple Food a Restaurants Category Bootstrap Responsive website Template | Sign Up :: w3layouts</title>
+        <title>Sunny Side Up Bakery  | Sign Up </title>
 <?php
 include_once("files.php");
 ?>
     </head>
-    <body> 
+    <body>
         <!-- banner -->
         <div class="banner about-w3bnr">
 <?php
@@ -36,11 +36,11 @@ include_once("adminheader.php");
 ?>
 
         </div>
-        <!-- //banner -->    
-        <!-- breadcrumb -->  
-        <div class="container">	
+        <!-- //banner -->
+        <!-- breadcrumb -->
+        <div class="container">
             <ol class="breadcrumb w3l-crumbs">
-                <li><a href="#"><i class="fa fa-home"></i> Home</a></li> 
+                <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
                 <li class="active">Add Category</li>
             </ol>
         </div>
@@ -48,9 +48,9 @@ include_once("adminheader.php");
         <!-- sign up-page -->
         <div class="login-page about">
             <img class="login-w3img" src="images/img3.jpg" alt="">
-            <div class="container"> 
-                <h3 class="w3ls-title w3ls-title1">Add Combo Packs</h3>  
-                <div class="login-agileinfo"> 
+            <div class="container">
+                <h3 class="w3ls-title w3ls-title1">Add Combo Packs</h3>
+                <div class="login-agileinfo">
 
                     <form name="abc" method="post" enctype="multipart/form-data"><div id="pre">
                             <input class="agile-ltext" type="text" name="name" placeholder="Combo Name" value="<?php print $comboinfo[1] ?>" required>
@@ -76,14 +76,15 @@ print "<img src='product/$comboinfo[4]' width='60px' height='60px'>";
 
 
 <?php
-if (isset($msg))
+if (isset($msg)) {
     print $msg;
+}
 ?>
 
-                </div>	 
+                </div>
             </div>
         </div>
-        <!-- //sign up-page -->  
+        <!-- //sign up-page -->
         <!-- subscribe -->
 <?php
 include_once("footer.php");
@@ -102,12 +103,12 @@ include_once("footer.php");
                     }
                 }
             });
-        </script> 
-        <!-- //cart-js -->	
+        </script>
+        <!-- //cart-js -->
         <!-- start-smooth-scrolling -->
-        <script src="js/SmoothScroll.min.js"></script>  
+        <script src="js/SmoothScroll.min.js"></script>
         <script type="text/javascript" src="js/move-top.js"></script>
-        <script type="text/javascript" src="js/easing.js"></script>	
+        <script type="text/javascript" src="js/easing.js"></script>
         <script type="text/javascript">
             jQuery(document).ready(function ($) {
                 $(".scroll").click(function (event) {
@@ -117,7 +118,7 @@ include_once("footer.php");
                 });
             });
         </script>
-        <!-- //end-smooth-scrolling -->	  
+        <!-- //end-smooth-scrolling -->
         <!-- smooth-scrolling-of-move-up -->
         <script type="text/javascript">
             $(document).ready(function () {
@@ -126,7 +127,7 @@ include_once("footer.php");
                  containerID: 'toTop', // fading element id
                  containerHoverID: 'toTopHover', // fading element hover id
                  scrollSpeed: 1200,
-                 easingType: 'linear' 
+                 easingType: 'linear'
                  };
                  */
 
@@ -134,7 +135,7 @@ include_once("footer.php");
 
             });
         </script>
-        <!-- //smooth-scrolling-of-move-up --> 
+        <!-- //smooth-scrolling-of-move-up -->
         <!-- Bootstrap core JavaScript
     ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
