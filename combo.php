@@ -2,7 +2,8 @@
 session_start();
 include_once "connect.php";
 
-function add_to_cart($pid, $pname, $pprice, $pimg) {
+function add_to_cart($pid, $pname, $pprice, $pimg)
+{
     global $conn;
 
     $qty = 1;
@@ -22,12 +23,12 @@ function add_to_cart($pid, $pname, $pprice, $pimg) {
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Staple Food a Restaurants Category Bootstrap Responsive website Template | Products :: w3layouts</title>
+        <title>Sunny Side Up Bakery  | Products </title>
         <?php
         include_once("files.php");
         ?>
     </head>
-    <body> 
+    <body>
         <!-- banner -->
         <div class="banner about-w3bnr">
             <?php
@@ -52,19 +53,19 @@ function add_to_cart($pid, $pname, $pprice, $pimg) {
             include_once("banner.php");
             ?>
         </div>
-        <!-- //banner -->    
-        <!-- breadcrumb -->  
-        <div class="container">	
+        <!-- //banner -->
+        <!-- breadcrumb -->
+        <div class="container">
             <ol class="breadcrumb w3l-crumbs">
-                <li><a href="#"><i class="fa fa-home"></i> Home</a></li> 
+                <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
                 <li class="active">Dishes</li>
             </ol>
         </div>
         <!-- //breadcrumb -->
         <!-- products -->
-        <div class="products">	 
+        <div class="products">
             <div class="container">
-                <div class="col-md-9 product-w3ls-right"> 
+                <div class="col-md-9 product-w3ls-right">
                     <div class="product-top">
                         <h4>Combo Packs</h4>
                         <div class="clearfix"> </div>
@@ -84,10 +85,10 @@ function add_to_cart($pid, $pname, $pprice, $pimg) {
                                 <div class="col-xs-6 col-sm-6 product-grids">
                                     <div class="flip-container flip-container1">
                                         <div class="flipper agile-products">
-                                            <div class="front"> 
-                                                <div class="agile-product-text agile-product-text2">              
-                                                    <h5><?php print "<a href='combopro.php?cuid=$ans[0]'>$ans[1]</a>"; ?></h5>  
-                                                </div> 
+                                            <div class="front">
+                                                <div class="agile-product-text agile-product-text2">
+                                                    <h5><?php print "<a href='combopro.php?cuid=$ans[0]'>$ans[1]</a>"; ?></h5>
+                                                </div>
                                                 <?php print "<a href='combopro.php?id=$ans[0]'><img src='product/$ans[4]' width='340px'></a>"; ?>
                                             </div>
                                             <div class="back">
@@ -102,7 +103,7 @@ function add_to_cart($pid, $pname, $pprice, $pimg) {
                                                 </form>
                                             </div>
                                         </div>
-                                    </div> 
+                                    </div>
                                 </div>
                                 <?php
                             }
@@ -114,25 +115,25 @@ function add_to_cart($pid, $pname, $pprice, $pimg) {
                 <?php
                 include_once("right.php");
                 ?>
-                <div class="clearfix"> </div> 
+                <div class="clearfix"> </div>
             </div>
         </div>
-        <!-- //products --> 
+        <!-- //products -->
         <div class="container"></div>
-        <!-- dishes --><!-- //dishes --> 
-        <!-- modal --> 
+        <!-- dishes --><!-- //dishes -->
+        <!-- modal -->
         <div class="modal video-modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModal1">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>						
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                     </div>
                     <section>
                         <div class="modal-body">
                             <div class="col-md-5 modal_body_left">
                                 <img src="images/s1.jpg" alt=" " class="img-responsive">
                             </div>
-                            <div class="col-md-7 modal_body_right single-top-right"> 
+                            <div class="col-md-7 modal_body_right single-top-right">
                                 <h3 class="item_name">France Special Dish</h3>
                                 <p>Proin placerat urna et consequat efficitur, sem odio blandit enim</p>
                                 <div class="single-rating">
@@ -144,43 +145,43 @@ function add_to_cart($pid, $pname, $pprice, $pimg) {
                                         <li class="w3act"><i class="fa fa-star-o" aria-hidden="true"></i></li>
                                         <li class="rating">20 reviews</li>
                                         <li><a href="#">Add your review</a></li>
-                                    </ul> 
+                                    </ul>
                                 </div>
                                 <div class="single-price">
                                     <ul>
-                                        <li>$18</li>  
-                                        <li><del>$20</del></li> 
-                                        <li><span class="w3off">10% OFF</span></li> 
+                                        <li>$18</li>
+                                        <li><del>$20</del></li>
+                                        <li><span class="w3off">10% OFF</span></li>
                                         <li>Ends on : Dec,5th</li>
                                         <li><a href="#"><i class="fa fa-gift" aria-hidden="true"></i> Coupon</a></li>
-                                    </ul>	
-                                </div> 
+                                    </ul>
+                                </div>
                                 <p class="single-price-text">Fusce a egestas nibh, eget ornare erat. Proin placerat, urna et consequat efficitur, sem odio blandit enim, sit amet euismod turpis est mattis lectus. Vestibulum maximus quam et quam egestas imperdiet. In dignissim auctor viverra. </p>
                                 <form action="#" method="post">
                                     <input type="hidden" name="cmd" value="_cart" />
-                                    <input type="hidden" name="add" value="1" /> 
-                                    <input type="hidden" name="w3ls_item" value="France Special" /> 
-                                    <input type="hidden" name="amount" value="18.00" /> 
+                                    <input type="hidden" name="add" value="1" />
+                                    <input type="hidden" name="w3ls_item" value="France Special" />
+                                    <input type="hidden" name="amount" value="18.00" />
                                     <button type="submit" class="w3ls-cart" ><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
                                 </form>
                                 <a href="#" class="w3ls-cart w3ls-cart-like"><i class="fa fa-heart-o" aria-hidden="true"></i> Add to Wishlist</a>
-                                <div class="single-page-icons social-icons"> 
+                                <div class="single-page-icons social-icons">
                                     <ul>
                                         <li><h4>Share on</h4></li>
                                         <li><a href="#" class="fa fa-facebook icon facebook"> </a></li>
                                         <li><a href="#" class="fa fa-twitter icon twitter"> </a></li>
                                         <li><a href="#" class="fa fa-google-plus icon googleplus"> </a></li>
                                         <li><a href="#" class="fa fa-dribbble icon dribbble"> </a></li>
-                                        <li><a href="#" class="fa fa-rss icon rss"> </a></li> 
+                                        <li><a href="#" class="fa fa-rss icon rss"> </a></li>
                                     </ul>
-                                </div> 
-                            </div> 
+                                </div>
+                            </div>
                             <div class="clearfix"> </div>
                         </div>
                     </section>
                 </div>
             </div>
-        </div> 
+        </div>
         <!-- //modal -->
         <!-- subscribe -->
         <?php include_once("footer.php"); ?>
@@ -198,8 +199,8 @@ function add_to_cart($pid, $pname, $pprice, $pimg) {
                     }
                 }
             });
-        </script>  
-        <!-- //cart-js --> 
+        </script>
+        <!-- //cart-js -->
         <!-- Owl-Carousel-JavaScript -->
         <script src="js/owl.carousel.js"></script>
         <script>
@@ -212,7 +213,7 @@ function add_to_cart($pid, $pname, $pprice, $pimg) {
                 });
             });
         </script>
-        <!-- //Owl-Carousel-JavaScript -->  	
+        <!-- //Owl-Carousel-JavaScript -->
         <!-- the jScrollPane script -->
         <script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
         <script type="text/javascript" id="sourcecode">
@@ -222,11 +223,11 @@ function add_to_cart($pid, $pname, $pprice, $pimg) {
             });
         </script>
         <!-- //the jScrollPane script -->
-        <script type="text/javascript" src="js/jquery.mousewheel.js"></script> <!-- the mouse wheel plugin --> 
+        <script type="text/javascript" src="js/jquery.mousewheel.js"></script> <!-- the mouse wheel plugin -->
         <!-- start-smooth-scrolling -->
-        <script src="js/SmoothScroll.min.js"></script>  
+        <script src="js/SmoothScroll.min.js"></script>
         <script type="text/javascript" src="js/move-top.js"></script>
-        <script type="text/javascript" src="js/easing.js"></script>	
+        <script type="text/javascript" src="js/easing.js"></script>
         <script type="text/javascript">
             jQuery(document).ready(function ($) {
                 $(".scroll").click(function (event) {
@@ -236,7 +237,7 @@ function add_to_cart($pid, $pname, $pprice, $pimg) {
                 });
             });
         </script>
-        <!-- //end-smooth-scrolling -->	  
+        <!-- //end-smooth-scrolling -->
         <!-- smooth-scrolling-of-move-up -->
         <script type="text/javascript">
             $(document).ready(function () {
@@ -245,7 +246,7 @@ function add_to_cart($pid, $pname, $pprice, $pimg) {
                  containerID: 'toTop', // fading element id
                  containerHoverID: 'toTopHover', // fading element hover id
                  scrollSpeed: 1200,
-                 easingType: 'linear' 
+                 easingType: 'linear'
                  };
                  */
 
@@ -253,7 +254,7 @@ function add_to_cart($pid, $pname, $pprice, $pimg) {
 
             });
         </script>
-        <!-- //smooth-scrolling-of-move-up -->  
+        <!-- //smooth-scrolling-of-move-up -->
         <!-- Bootstrap core JavaScript
     ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
