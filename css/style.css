@@ -2484,9 +2484,9 @@ p.single-price-text {
     background-position: 0 !important;
 }
 
-.agile-ltext:focus::-webkit-input-placeholder,
+/* .agile-ltext:focus::-webkit-input-placeholder,
 .agile-ltext:valid::-webkit-input-placeholder {
-    color: #fd463e;
+    color: #f36846;
     font-size: .9em;
     -webkit-transform: translateY(-20px);
     -moz-transform: translateY(-20px);
@@ -2494,7 +2494,7 @@ p.single-price-text {
     -ms-transform: translateY(-20px);
     transform: translateY(-28px);
     visibility: visible !important;
-}
+} */
 
 ::-webkit-input-placeholder {
     color: #999;
