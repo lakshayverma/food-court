@@ -1,0 +1,144 @@
+/* devanagari */
+@font-face {
+  font-family: 'Yantramanav';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Yantramanav Thin'), local('Yantramanav-Thin'), url(http://fonts.gstatic.com/s/yantramanav/v1/Rs1I2PF4Z8GAb6qjgvr8wFCqpWq_4cg052Upsbn-e80.woff2) format('woff2');
+  unicode-range: U+02BC, U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200B-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Yantramanav';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Yantramanav Thin'), local('Yantramanav-Thin'), url(http://fonts.gstatic.com/s/yantramanav/v1/Rs1I2PF4Z8GAb6qjgvr8wLr6l97bd_cX8oZCLqDvOn0.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Yantramanav';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Yantramanav Thin'), local('Yantramanav-Thin'), url(http://fonts.gstatic.com/s/yantramanav/v1/Rs1I2PF4Z8GAb6qjgvr8wNFPPhm6yPYYGACxOp9LMJ4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* devanagari */
+@font-face {
+  font-family: 'Yantramanav';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Yantramanav Light'), local('Yantramanav-Light'), url(http://fonts.gstatic.com/s/yantramanav/v1/HSfbC4Z8I8BZ00wiXeA5bNubAPCnqwk7_Xc8a9uhFZ0.woff2) format('woff2');
+  unicode-range: U+02BC, U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200B-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Yantramanav';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Yantramanav Light'), local('Yantramanav-Light'), url(http://fonts.gstatic.com/s/yantramanav/v1/HSfbC4Z8I8BZ00wiXeA5bKvyPXdneeGd26m9EmFSSWg.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Yantramanav';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Yantramanav Light'), local('Yantramanav-Light'), url(http://fonts.gstatic.com/s/yantramanav/v1/HSfbC4Z8I8BZ00wiXeA5bEo2lTMeWA_kmIyWrkNCwPc.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* devanagari */
+@font-face {
+  font-family: 'Yantramanav';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Yantramanav'), local('Yantramanav-Regular'), url(http://fonts.gstatic.com/s/yantramanav/v1/E1Z7InSGFB89Npehsy0O7Jd-YqeGZiJEdX0sEGp0JvE.woff2) format('woff2');
+  unicode-range: U+02BC, U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200B-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Yantramanav';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Yantramanav'), local('Yantramanav-Regular'), url(http://fonts.gstatic.com/s/yantramanav/v1/E1Z7InSGFB89Npehsy0O7CYE0-AqJ3nfInTTiDXDjU4.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Yantramanav';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Yantramanav'), local('Yantramanav-Regular'), url(http://fonts.gstatic.com/s/yantramanav/v1/E1Z7InSGFB89Npehsy0O7I4P5ICox8Kq3LLUNMylGO4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* devanagari */
+@font-face {
+  font-family: 'Yantramanav';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Yantramanav Medium'), local('Yantramanav-Medium'), url(http://fonts.gstatic.com/s/yantramanav/v1/HSfbC4Z8I8BZ00wiXeA5bH12COuaRza-jfq9kpxSCKI.woff2) format('woff2');
+  unicode-range: U+02BC, U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200B-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Yantramanav';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Yantramanav Medium'), local('Yantramanav-Medium'), url(http://fonts.gstatic.com/s/yantramanav/v1/HSfbC4Z8I8BZ00wiXeA5bLX8PDrklLOWyWIn-2-AqKA.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Yantramanav';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Yantramanav Medium'), local('Yantramanav-Medium'), url(http://fonts.gstatic.com/s/yantramanav/v1/HSfbC4Z8I8BZ00wiXeA5bLBojE9J5UnpMtv5N3zfxwk.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* devanagari */
+@font-face {
+  font-family: 'Yantramanav';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Yantramanav Bold'), local('Yantramanav-Bold'), url(http://fonts.gstatic.com/s/yantramanav/v1/HSfbC4Z8I8BZ00wiXeA5bJRg-9ZTZj4Oi-6CEThT2Do.woff2) format('woff2');
+  unicode-range: U+02BC, U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200B-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Yantramanav';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Yantramanav Bold'), local('Yantramanav-Bold'), url(http://fonts.gstatic.com/s/yantramanav/v1/HSfbC4Z8I8BZ00wiXeA5bOjkDdvhIIFj_YMdgqpnSB0.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Yantramanav';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Yantramanav Bold'), local('Yantramanav-Bold'), url(http://fonts.gstatic.com/s/yantramanav/v1/HSfbC4Z8I8BZ00wiXeA5bIlIZu-HDpmDIZMigmsroc4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* devanagari */
+@font-face {
+  font-family: 'Yantramanav';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Yantramanav Black'), local('Yantramanav-Black'), url(http://fonts.gstatic.com/s/yantramanav/v1/HSfbC4Z8I8BZ00wiXeA5bE7XEIlNY3RtLqrDAd8cuyM.woff2) format('woff2');
+  unicode-range: U+02BC, U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200B-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Yantramanav';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Yantramanav Black'), local('Yantramanav-Black'), url(http://fonts.gstatic.com/s/yantramanav/v1/HSfbC4Z8I8BZ00wiXeA5bLlR9l3n4ZtVZdCvvDPwi9o.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Yantramanav';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Yantramanav Black'), local('Yantramanav-Black'), url(http://fonts.gstatic.com/s/yantramanav/v1/HSfbC4Z8I8BZ00wiXeA5bMpPZoEQdaDZ3o3Np19rzJk.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
