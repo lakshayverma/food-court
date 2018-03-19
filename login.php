@@ -96,7 +96,6 @@ function abc()
                                     <span> Remember me ?</span>
                                 </label>
                             </li>
-                            <li><a href="#">Forgot password?</a> </li>
                         </ul>
                         <div class="clearfix"> </div>
                     </div>

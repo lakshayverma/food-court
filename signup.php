@@ -47,7 +47,7 @@ if (isset($_POST["s1"])) {
 
                 if (document.form1.pass.value.length < 8)
                 {
-                    alert("Plz enter password of 8 characher")
+                    alert("Please enter password of 8 characher")
                     return false;
                 }
                 var p1 = document.form1.pass.value;
@@ -59,7 +59,7 @@ if (isset($_POST["s1"])) {
                 }
                 if (document.form1.phno.value.length != 10)
                 {
-                    alert("Plz enter proper phone no")
+                    alert("Please enter proper phone no")
                     return false;
                 }
                 var pr = /^[0-9]$/
