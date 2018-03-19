@@ -2,7 +2,7 @@
     <div class="w3ls-header"><!-- header-one -->
         <div class="container">
             <div class="w3ls-header-left">
-                <p>Free home delivery at your doorstep For Above $30</p>
+                <p>Free home delivery at your doorstep For Above ₹300/-</p>
             </div>
             <div class="w3ls-header-right">
                 <ul>
