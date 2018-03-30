@@ -96,5 +96,5 @@ function formatCurrency($amount)
 
 function getDeliveryBoy()
 {
-    return getConfig('deliveryCode');
+    return getConfigValue('deliveryCode');
 }
