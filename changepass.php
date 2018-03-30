@@ -1,5 +1,7 @@
 <?php
-session_start();
+require_once('includes/logic.php');
+usersOnly();
+
 if (isset($_POST["s1"])) {
     $email=$_SESSION["email"];
     include"connect.php";
@@ -13,7 +15,7 @@ if (isset($_POST["s1"])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Sunny Side Up Bakery  | Sign Up </title>
+<title><?php echo getSiteName(); ?>  | Change Password </title>
 <?php
 include_once("files.php");
 ?>

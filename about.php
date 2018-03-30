@@ -1,3 +1,7 @@
+<?php
+require_once('includes/logic.php');
+
+?>
 <!--
 Author: W3layouts
 Author URL: http://w3layouts.com
@@ -7,7 +11,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Sunny Side Up Bakery  | About </title>
+<title><?php echo getSiteName(); ?>  | About </title>
 <?php
 include_once("files.php");
 ?>
@@ -158,7 +162,7 @@ include_once("files.php");
     </div>
     <div class="copyw3-agile">
         <div class="container">
-            <p>&copy; 2017 Sunny Side Up Bakery. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+            <p>&copy; 2017 <?php echo getSiteName(); ?>. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
         </div>
     </div>
     <!-- //footer -->

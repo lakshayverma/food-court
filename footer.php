@@ -39,6 +39,6 @@
 	</div>
 	<div class="copyw3-agile">
 		<div class="container">
-			<p>&copy; 2018 Sunny Side Up Bakery. All rights reserved | Developed by <a href="index.php">Sunny Verma</a></p>
+			<p>&copy; 2018 <?php echo getSiteName(); ?>. All rights reserved | Developed by <a href="index.php">Sunny Verma</a></p>
 		</div>
 	</div>

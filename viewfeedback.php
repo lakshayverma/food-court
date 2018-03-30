@@ -1,10 +1,10 @@
 <?php
-session_start();
+require_once('includes/logic.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Sunny Side Up Bakery  | Sign Up </title>
+<title><?php echo getSiteName(); ?>  | Sign Up </title>
 <?php
 include_once("files.php");
 ?>

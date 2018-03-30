@@ -36,7 +36,7 @@ if (isset($_POST["s1"])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Sunny Side Up Bakery  | Login </title>
+<title><?php echo getSiteName(); ?>  | Login </title>
 <?php
 include_once("files.php");
 ?>

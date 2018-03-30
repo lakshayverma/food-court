@@ -23,7 +23,7 @@ if (isset($_POST["s1"])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Sunny Side Up Bakery  | Add Product Page </title>
+<title><?php echo getSiteName(); ?>  | Add Product Page </title>
 <?php
 include_once("files.php");
 ?>

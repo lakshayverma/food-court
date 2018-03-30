@@ -6,7 +6,7 @@ adminsOnly();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Sunny Side Up Bakery  | Home </title>
+<title><?php echo getSiteName(); ?>  | Home </title>
 <?php
 include_once("files.php");
 ?>

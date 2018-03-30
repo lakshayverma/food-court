@@ -1,4 +1,7 @@
 <?php
+require_once('includes/logic.php');
+
+
 include "connect.php";
 $catid=$_GET["id"];
 $qu="select * from addsubcategory where cid=$catid";
@@ -30,7 +33,7 @@ if (isset($_POST["s1"])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Sunny Side Up Bakery  | Sign Up </title>
+<title><?php echo getSiteName(); ?>  | Sign Up </title>
 <?php
 include_once("files.php");
 ?>

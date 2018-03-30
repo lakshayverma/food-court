@@ -1,5 +1,6 @@
 <?php
-session_start();
+require_once('includes/logic.php');
+
 if (isset($_POST["s1"])) {
     include "connect.php";
     $name=$_POST["name"];
@@ -13,7 +14,7 @@ if (isset($_POST["s1"])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Sunny Side Up Bakery  | Contact Us </title>
+<title><?php echo getSiteName(); ?>  | Contact Us </title>
 <?php
 include_once("files.php");
 ?>

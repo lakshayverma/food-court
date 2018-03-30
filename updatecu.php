@@ -1,5 +1,6 @@
 <?php
-session_start();
+require_once('includes/logic.php');
+
 $cu=$_GET["id"];
 include "connect.php";
 $qu=mysqli_query($conn, "select * from cuisine where id=$cu") or die(mysqli_error($conn));
@@ -29,7 +30,7 @@ if (isset($_POST["s1"])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Sunny Side Up Bakery  | Login </title>
+<title><?php echo getSiteName(); ?>  | Login </title>
 <?php
 include_once("files.php");
 ?></head>

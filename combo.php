@@ -1,5 +1,7 @@
 <?php
-session_start();
+
+require_once('includes/logic.php');
+
 include_once "connect.php";
 
 function add_to_cart($pid, $pname, $pprice, $pimg)
@@ -23,7 +25,7 @@ function add_to_cart($pid, $pname, $pprice, $pimg)
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Sunny Side Up Bakery  | Products </title>
+        <title><?php echo getSiteName(); ?>  | Products </title>
         <?php
         include_once("files.php");
         ?>

@@ -1,7 +1,11 @@
+<?php
+require_once('includes/logic.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Sunny Side Up Bakery  | Products </title>
+<title><?php echo getSiteName(); ?>  | Products </title>
 <?php
 include_once("files.php");
 ?>

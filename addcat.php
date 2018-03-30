@@ -1,4 +1,6 @@
 <?php
+require_once('includes/logic.php');
+
 if (isset($_POST["s1"])) {
     $a = $_POST["name"];
     $b = $_FILES["image"]["name"];
@@ -15,7 +17,7 @@ if (isset($_POST["s1"])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Sunny Side Up Bakery  | Sign Up </title>
+<title><?php echo getSiteName(); ?>  | Sign Up </title>
 <?php
 include_once("files.php");
 ?>
