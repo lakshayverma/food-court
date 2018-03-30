@@ -1,21 +1,25 @@
 <?php
+require_once('includes/logic.php');
+
 ob_start();
-session_start();
 include_once("connect.php");
-$uname=$_SESSION["email"];
-$qu=mysqli_query($conn, "select * from billinginfo where uname='$uname' order by bill_id desc") or die(mysqli_error($conn));
-$res234=mysqli_fetch_array($qu);
-$qu=mysqli_query($conn, "select * from cart where uname='$uname'") or die(mysqli_error($conn));
-while ($ans=mysqli_fetch_array($qu)) {
-    $qu2="insert into orderhistory(billid,pid,pname,image,price,qty,tcost,uname) values($res234[0],$ans[1],'$ans[2]','$ans[3]','$ans[4]','$ans[5]','$ans[6]','$ans[7]')";
+$orderPlacedBy = $_SESSION["email"];
+$qu = mysqli_query($conn, "select * from billinginfo where email='$orderPlacedBy' order by bill_id desc") or die(mysqli_error($conn));
+
+$billingInformation = mysqli_fetch_array($qu);
+
+$qu=mysqli_query($conn, "select * from cart where uname='$orderPlacedBy'") or die(mysqli_error($conn));
+while ($productInCart = mysqli_fetch_array($qu)) {
+    $qu2="insert into orderhistory (billid,pid,pname,image,price,qty,tcost,uname) values($billingInformation[0],$productInCart[1],'$productInCart[2]','$productInCart[3]','$productInCart[4]','$productInCart[5]','$productInCart[6]','$productInCart[7]')";
     mysqli_query($conn, $qu2) or die(mysqli_error($conn));
 }
-$qu3=mysqli_query($conn, "delete from cart where uname='$uname'") or die(mysqli_error($conn));
+
+$qu3=mysqli_query($conn, "delete from cart where uname='$orderPlacedBy'") or die(mysqli_error($conn));
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Sunny Side Up Bakery  | Products </title>
+<title><?php echo getSiteName(); ?>  | Products </title>
 <style type="text/css">
 .style1 {font-size: xx-large}
 .style2 {color: #EE7506}
@@ -55,7 +59,7 @@ include_once("files.php");
     </tr>
     <tr>
     <td width='15%'>&nbsp;</td>
-    <td align="left"><h3><font color="#FF0000">Your Order is placed at order id:<?php print $res234[0];?></font></h3></td>
+    <td align="left"><h3><font color="#FF0000">Your Order is placed at order id:<?php print $billingInformation[0];?></font></h3></td>
     <td width="15%">&nbsp;</td>
   </tr>
     <tr>
@@ -65,7 +69,7 @@ include_once("files.php");
     </tr>
     <tr>
       <td>&nbsp;</td>
-      <td><h3><font color="#FF0000">Grand Tota:Rs. <?php print $res234[8];?>/-</font></h3></td>
+      <td><h3><font color="#FF0000">Grand Tota:Rs. <?php print $billingInformation[8];?>/-</font></h3></td>
       <td></td>
     </tr>
     <tr>
@@ -89,7 +93,7 @@ include_once("files.php");
     <td>&nbsp;</td>
     <td>
     <?php
-    $qu234=mysqli_query($conn, "select * from orderhistory where billid=$res234[0]") or die(mysqli_error($conn));
+    $qu234=mysqli_query($conn, "select * from orderhistory where billid=$billingInformation[0]") or die(mysqli_error($conn));
     if (mysqli_affected_rows($conn)) {
         print "<table width='800px' align='center'>
             <tr bgcolor='#574C44' height='40px'>
