@@ -36,11 +36,10 @@ if (isset($_POST["next"])) {
             . ",{$tcost}"
             . ",'{$placedBy}'"
             . ",'{$status}'"
-            . ",'none'"
             . ",'{$deliveryBy}'"
             . ")";
 
-    $result=mysqli_query($conn, $query) or die(mysqli_error($conn));
+    $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
     if (mysqli_affected_rows($conn)) {
         header("location:thanks.php");
     }

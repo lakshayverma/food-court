@@ -4,7 +4,7 @@ require_once('includes/logic.php');
 ob_start();
 include_once("connect.php");
 $orderPlacedBy = $_SESSION["email"];
-$qu = mysqli_query($conn, "select * from billinginfo where email='$orderPlacedBy' order by bill_id desc") or die(mysqli_error($conn));
+$qu = mysqli_query($conn, "select * from billinginfo where uname='$orderPlacedBy' order by bill_id desc") or die(mysqli_error($conn));
 
 $billingInformation = mysqli_fetch_array($qu);
 

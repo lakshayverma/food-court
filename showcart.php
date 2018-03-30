@@ -86,33 +86,43 @@ ob_start();
 
                                 $finalCost = $tcost + $deliveryCharges;
                                 $_SESSION["tcost"] = $finalCost;
+                                if ($tcost) {
+                                    ?>
+                                        <table class="table table-condensed table-stripped">
+                                            <tr>
+                                                <th>Products Cost</th>
+                                                <td>
+                                                    <?php echo formatCurrency($tcost); ?>
+                                                </td>
+                                            </tr>
+                                            <tr class="text-primary">
+                                                <th>Delivery Charges</th>
+                                                <td>
+                                                    <?php echo formatCurrency($deliveryCharges); ?>
+                                                </td>
+                                            </tr>
+                                            <tr class="text-success">
+                                                <th>Total Cost</th>
+                                                <td>
+                                                    <?php echo formatCurrency($tcost + $deliveryCharges); ?>
+                                                </td>
+                                            </tr>
+                                        </table>
+                            <?php
+                                }
                             ?>
-                            <table class="table table-condensed table-stripped">
-                                <tr>
-                                    <th>Products Cost</th>
-                                    <td>
-                                        <?php echo formatCurrency($tcost);?>
-                                    </td>
-                                </tr>
-                                <tr class="text-primary">
-                                    <th>Delivery Charges</th>
-                                    <td>
-                                        <?php echo formatCurrency($deliveryCharges);?>
-                                    </td>
-                                </tr>
-                                <tr class="text-success">
-                                    <th>Total Cost</th>
-                                    <td>
-                                        <?php echo formatCurrency($tcost + $deliveryCharges);?>
-                                    </td>
-                                </tr>
-                            </table>
                         </div>
                         <hr>
                         <div class="col-md-12 text-right">
                             <form method="post">
                                 <div class="btn-group">
+                                <?php
+                                if ($tcost) {
+                                    ?>
                                     <input class="btn btn-success" type="submit" name="checkout" value="Checkout">
+                                    <?php
+                                }
+                                ?>
                                     <input class="btn btn-primary" type="submit" name="continue" value="Continue Shopping">
                                 </div>
                             </form>
