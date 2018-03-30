@@ -6,7 +6,8 @@ require_once('includes/logic.php');
 <?php
 include"connect.php";
 if (isset($_POST["next"])) {
-    $deliveryBy = getDeliveryBoy() ; //$_SESSION["email"];
+    $deliveryBy = getDeliveryBoy() ;
+    $placedBy = $_SESSION["email"];
 
     $tcost = $_SESSION["tcost"];
 
@@ -33,9 +34,10 @@ if (isset($_POST["next"])) {
             . ",'{$pincode}'"
             . ",'{$phone}'"
             . ",{$tcost}"
-            . ",'{$deliveryBy}'"
+            . ",'{$placedBy}'"
             . ",'{$status}'"
             . ",'none'"
+            . ",'{$deliveryBy}'"
             . ")";
 
     $result=mysqli_query($conn, $query) or die(mysqli_error($conn));
@@ -47,7 +49,7 @@ if (isset($_POST["next"])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Sunny Side Up Bakery  | Products </title>
+<title><?php echo getSiteName(); ?>  | Products </title>
 <style type="text/css">
 .style1 {font-size: xx-large}
 .style2 {color: #EE7506}
