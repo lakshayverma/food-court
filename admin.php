@@ -1,5 +1,7 @@
 <?php
-session_start();
+require_once('includes/logic.php');
+
+adminsOnly();
 ?>
 <!DOCTYPE html>
 <html lang="en">

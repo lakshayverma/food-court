@@ -25,3 +25,10 @@ function guestsOnly($userType = null)
         // continue
     }
 }
+
+function adminsOnly()
+{
+    if (! isUser('admin')) {
+        header("location:index.php");
+    }
+}

@@ -1,5 +1,9 @@
 <?php
-session_start();
+require_once('includes/logic.php');
+
+adminsOnly();
+
+
 if (isset($_POST["s1"])) {
     include"connect.php";
     $category=$_POST["cat"];
