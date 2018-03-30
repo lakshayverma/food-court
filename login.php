@@ -29,7 +29,7 @@ if (isset($_POST["s1"])) {
             }
         }
     } else {
-        $msg="Wrong Username and password";
+        $msg="Wrong E-Mail and password";
     }
 }
 ?>
@@ -90,7 +90,7 @@ function abc()
             <h3 class="w3ls-title w3ls-title1">Login to your account</h3>
             <div class="login-agileinfo">
                 <form name="form-login" method="post">
-                    <input class="agile-ltext" type="text" name="uname" placeholder="Username">
+                    <input class="agile-ltext" type="text" name="uname" placeholder="Email">
                     <input class="agile-ltext" type="password" name="pass" placeholder="Password">
                     <div class="wthreelogin-text">
                         <ul>
