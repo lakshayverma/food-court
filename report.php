@@ -41,7 +41,13 @@ ob_start();
             <!-- breadcrumb -->
             <ol class="breadcrumb w3l-crumbs">
                 <li><a href="index.php"><i class="fa fa-home"></i> Home</a></li>
+                <?php
+                if (isUser('admin')) {
+                    ?>
                 <li><a href="admin.php"><i class="fa fa-user"></i>Admin</a></li>
+                <?php
+                }
+                ?>
                 <li class="active">Report</li>
             </ol>
 
