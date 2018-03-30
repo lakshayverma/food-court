@@ -74,7 +74,6 @@
                                             <li><a href="addsubcat.php">Add Subcategory</a></li>
                                             <li><a href="addcuisine.php">Add Cuisine</a></li>
                                             <li><a href="addprod.php">Add Product</a></li>
-                                            <li><a href="addcomboprod.php">Add Combo Packs</a></li>
                                         </ul>
                                     </div>
                                     <div class="col-sm-6">
@@ -84,17 +83,8 @@
                                             <li><a href="vsubcat.php">View Subcategory</a></li>
                                             <li><a href="vcus.php">View Cuisine</a></li>
                                             <li><a href="vprod.php">View Product</a></li>
-                                            <li><a href="vcombo.php">View Combo Pack</a></li>
                                         </ul>
                                     </div>
-<!--                                    <div class="col-sm-4">
-                                        <ul class="multi-column-dropdown">
-                                            <h6>View User</h6>
-                                            <li><a href="viewmember.php">View Member</a></li>
-                                            <li><a href="vemployee.php">View Employee</a></li>
-
-                                        </ul>
-                                    </div> -->
                                     <div class="clearfix"></div>
                                 </div>
                             </ul>
@@ -107,12 +97,8 @@
                             </ul>
                         </li>
                         <li><a href="addemployee.php">Add Employee</a></li>
-
-
-
                     </ul>
                 </div>
-
             </nav>
         </div>
     </div>

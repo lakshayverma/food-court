@@ -50,10 +50,11 @@ include_once("files.php");
                 <div class="col-md-3 col-sm-3 col-xs-6 order-w3lsgrids">
                     <div class="order-w3text">
                         <i class="fa fa-credit-card" aria-hidden="true"></i>
-                        <h5><a href="addemp.php">Add Employee</a></h5>
-                        <span>4</span>
+                        <h5><a href="addprod.php">Add Product</a></h5>
+                        <span>3</span>
                     </div>
                 </div>
+
                 <div class="clearfix"> </div>
             </div>
         </div>
@@ -66,17 +67,17 @@ include_once("files.php");
                         <span>5</span></a>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-3 col-xs-6 order-w3lsgrids">
+                                <div class="col-md-3 col-sm-3 col-xs-6 order-w3lsgrids">
                     <div class="order-w3text">
-                        <i class="fa fa-cutlery" aria-hidden="true"></i>
-                        <h5><a href="addcomboprod.php">Add combo</a></h5>
+                        <i class="fa fa-credit-card" aria-hidden="true"></i>
+                        <h5><a href="viewfeedback.php">View Feedback</a></h5>
                         <span>6</span>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-6 order-w3lsgrids">
                     <div class="order-w3text">
                         <i class="fa fa-credit-card" aria-hidden="true"></i>
-                        <h5><a href="vcombo.php">view combo</a></h5>
+                        <h5><a href="vieworder.php">View Order</a></h5>
                         <span>7</span>
                     </div>
                 </div>
@@ -114,47 +115,13 @@ include_once("files.php");
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-6 order-w3lsgrids">
                     <div class="order-w3text">
-                        <i class="fa fa-credit-card" aria-hidden="true"></i>
-                        <h5><a href="vemp.php">View Employee</a></h5>
+                        <i class="fa fa-cutlery" aria-hidden="true"></i>
+                        <h5><a href="viewcontact.php">View Contact</a></h5>
                         <span>12</span>
                     </div>
                 </div>
                 <div class="clearfix"> </div>
             </div>
-
-        </div><br/><br/><br/><br/>
-        <div class="order-agileinfo">
-                <div class="col-md-3 col-sm-3 col-xs-6 order-w3lsgrids">
-                    <div class="order-w3text">
-                        <i class="fa fa-map" aria-hidden="true"></i>
-                        <h5><a href="addmem.php">Add Member</a></h5>
-                        <span>13</span>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-6 order-w3lsgrids">
-                    <div class="order-w3text">
-                        <i class="fa fa-cutlery" aria-hidden="true"></i>
-                        <h5><a href="viewcontact.php">View Contact</a></h5>
-                        <span>14</span>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-6 order-w3lsgrids">
-                    <div class="order-w3text">
-                        <i class="fa fa-credit-card" aria-hidden="true"></i>
-                        <h5><a href="vfeed.php">View Feedback</a></h5>
-                        <span>15</span>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-6 order-w3lsgrids">
-                    <div class="order-w3text">
-                        <i class="fa fa-credit-card" aria-hidden="true"></i>
-                        <h5><a href="vorder.php">View Order</a></h5>
-                        <span>16</span>
-                    </div>
-                </div>
-                <div class="clearfix"> </div>
-            </div>
-        </div>
     </div>
     <br/><br/><br/>
     <!-- //order -->
