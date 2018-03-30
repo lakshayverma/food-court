@@ -50,8 +50,8 @@ include_once("files.php");
                 <div class="col-md-3 col-sm-3 col-xs-6 order-w3lsgrids">
                     <div class="order-w3text">
                         <i class="fa fa-credit-card" aria-hidden="true"></i>
-                        <h5><a href="addprod.php">Add Product</a></h5>
-                        <span>3</span>
+                        <h5><a href="report.php">Most Ordered Products</a></h5>
+                        <span>4</span>
                     </div>
                 </div>
 
