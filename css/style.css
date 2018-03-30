@@ -2861,7 +2861,7 @@ section#tables p {
     background-color: #ffffff;
 }
 
-.table td,
+/* .table td,
 .table>tbody>tr>td,
 .table>tbody>tr>th,
 .table>tfoot>tr>td,
@@ -2880,7 +2880,7 @@ section#tables p {
     font-size: 0.9em;
     color: #999;
     border-top: none !important;
-}
+} */
 
 .tab-content>.active {
     display: block;

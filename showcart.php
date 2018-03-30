@@ -34,7 +34,7 @@ ob_start();
         <div class="container">
             <!-- breadcrumb -->
             <ol class="breadcrumb w3l-crumbs">
-                <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="index.php"><i class="fa fa-home"></i> Home</a></li>
                 <li class="active">Dishes</li>
             </ol>
 
@@ -89,19 +89,19 @@ ob_start();
                             ?>
                             <table class="table table-condensed table-stripped">
                                 <tr>
-                                    <td>Products Cost</td>
+                                    <th>Products Cost</th>
                                     <td>
                                         <?php echo formatCurrency($tcost);?>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>Delivery Charges</td>
+                                <tr class="text-primary">
+                                    <th>Delivery Charges</th>
                                     <td>
                                         <?php echo formatCurrency($deliveryCharges);?>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>Total Cost</td>
+                                <tr class="text-success">
+                                    <th>Total Cost</th>
                                     <td>
                                         <?php echo formatCurrency($tcost + $deliveryCharges);?>
                                     </td>
