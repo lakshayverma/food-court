@@ -68,6 +68,13 @@ function guestsOnly($userType = null)
     }
 }
 
+function usersOnly()
+{
+    if (! isUser()) {
+        header("location:index.php");
+    }
+}
+
 function adminsOnly()
 {
     if (! isUser('admin')) {
@@ -75,8 +82,19 @@ function adminsOnly()
     }
 }
 
+function getSiteName()
+{
+    return getConfigValue('siteName', 'Sunny Side Up Bakery');
+}
+
 
 function formatCurrency($amount)
 {
     return '₹' . $amount . '/-';
+}
+
+
+function getDeliveryBoy()
+{
+    return getConfig('deliveryCode');
 }

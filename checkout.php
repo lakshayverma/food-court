@@ -1,22 +1,43 @@
 <?php
 ob_start();
-session_start();
+require_once('includes/logic.php');
+
 ?>
 <?php
 include"connect.php";
 if (isset($_POST["next"])) {
-    $uname=$_SESSION["email"];
-    $tcost=$_SESSION["tcost"];
-    $fname=$_POST["fname"];
-    $lname=$_POST["lname"];
-    $email=$_POST["email"];
-    $address=$_POST["address"];
-    $city=$_POST["city"];
-    $pincode=$_POST["pincode"];
-    $phone=$_POST["phone"];
+    $deliveryBy = getDeliveryBoy() ; //$_SESSION["email"];
+
+    $tcost = $_SESSION["tcost"];
+
+    $fname = $_POST["fname"];
+    $lname = $_POST["lname"];
+    $email = $_POST["email"];
+    $address = $_POST["address"];
+    $city = $_POST["city"];
+    $pincode = $_POST["pincode"];
+    $phone = $_POST["phone"];
+
     $status="Pending";
+
     include"connect.php";
-    $query="insert into billinginfo(fname,lname,email,address,city,pincode,phone,totalcost,uname,status,delever_by) values ('$fname','$lname','$email','$address','$city','$pincode','$phone',$tcost,'$uname','$status','none')";
+
+    $query = "insert into billinginfo"
+            . " (fname,lname,email,address,city,pincode,phone,totalcost,uname,status,delever_by)"
+            . " values ("
+            . "'{$fname}'"
+            . ",'{$lname}'"
+            . ",'{$email}'"
+            . ",'{$address}'"
+            . ",'{$city}'"
+            . ",'{$pincode}'"
+            . ",'{$phone}'"
+            . ",{$tcost}"
+            . ",'{$deliveryBy}'"
+            . ",'{$status}'"
+            . ",'none'"
+            . ")";
+
     $result=mysqli_query($conn, $query) or die(mysqli_error($conn));
     if (mysqli_affected_rows($conn)) {
         header("location:thanks.php");

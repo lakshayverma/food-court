@@ -6,6 +6,7 @@ function configs()
         'minOrder' => 300,
         'deliveryCharges' => 50,
         'deliveryChargesType' => 'flat',
+        'deliveryCode' => 'Delivery Boy',
     ];
 }
 
