@@ -45,7 +45,7 @@ include_once("files.php");
             <h3 class="w3ls-title w3ls-title1">Update Status</h3>
             <div class="login-agileinfo">
                 <form name="abc" method="post" enctype="multipart/form-data">
-                    <input class="agile-ltext" type="text" name="Bill Id" value="<?php print $bilinfo[0]?>" placeholder="Category Name" required><br/><br/>
+                    <input class="agile-ltext" type="text" name="Bill Id" value="<?php print $bilinfo[0]?>" disabled><br/><br/>
                     <select name="st">
                     <option>Pending</option>
                     <option>Deliver</option>

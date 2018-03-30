@@ -10,10 +10,11 @@ include_once("files.php");
 ?>
 <style>
     table.table tbody tr {
-        background: #0b0e17;
+        background: #ffffff;
+	border:1px solid black;
     }
     table.table tbody tr:nth-child(odd) {
-        background: #11111d;
+        background: #9B8B80;
     }
 
     td {

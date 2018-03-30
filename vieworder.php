@@ -32,7 +32,7 @@ include_once("files.php");
                 $qu=mysqli_query($conn, "select * from billinginfo") or die(mysqli_error($conn));
                 if (mysqli_affected_rows($conn)>0) {
                     print "<table align='center' width='1200px'>
-                        <tr bgcolor='#574C44' height='40px'>
+                        <tr bgcolor='#574C44' height='40px' >
                             <td><font color='#FFFFFF'>Bill Id</font></td>
                             <td><font color='#FFFFFF'>Name</font></td>
                             <td><font color='#FFFFFF'>Email</font></td>
@@ -48,8 +48,8 @@ include_once("files.php");
                     $col=1;
                     while ($ans=mysqli_fetch_array($qu)) {
                         if ($col%2==0) {
-                            print "<tr bgcolor='#D1BDBA' height='40px'>
-                            <td><a href='vieworderproduct.php?id=$ans[0]'>$ans[0]</a></td>
+                            print "<tr bgcolor='#F0F0F0' height='40px' style='border:1px solid black;color:black'>
+                            <td><a href='vieworderproduct.php?id=$ans[0]'style='color:#000'>$ans[0]</a></td>
                             <td>$ans[1] $ans[2]</td>
                             <td>$ans[3]</td>
                             <td>$ans[7]</td>
@@ -57,12 +57,12 @@ include_once("files.php");
                             <td>$ans[4]</td>
                             <td>$ans[8]</td>
                             <td>$ans[10]</td>
-                            <td><a href='updatestatus.php?id=$ans[0]' style='color:#FFF'>Update</a></td>
+                            <td><a href='updatestatus.php?id=$ans[0]' style='color:#000000'>Update</a></td>
                             <td>$ans[11]</td>
                         </tr>";
                         } else {
-                            print "<tr bgcolor='#EC665B' height='40px'>
-                            <td><a href='vieworderproduct.php?id=$ans[0]'>$ans[0]</a></td>
+                            print "<tr bgcolor='#9B8B80'  height='40px' style='border:1px solid black;color:black'>
+                            <td><a href='vieworderproduct.php?id=$ans[0]' style='color:#000'>$ans[0]</a></td>
                             <td>$ans[1] $ans[2]</td>
                             <td>$ans[3]</td>
                             <td>$ans[7]</td>
