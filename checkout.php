@@ -16,7 +16,7 @@ if (isset($_POST["next"])) {
     $phone=$_POST["phone"];
     $status="Pending";
     include"connect.php";
-    $query="insert into billinginfo(fname,lname,email,address,city,pincode,phone,totalcost,uname,status,delever_by)    values('$fname','$lname','$email','$address','$city','$pincode','$phone',$tcost,'$uname','$status','none')";
+    $query="insert into billinginfo(fname,lname,email,address,city,pincode,phone,totalcost,uname,status,delever_by) values ('$fname','$lname','$email','$address','$city','$pincode','$phone',$tcost,'$uname','$status','none')";
     $result=mysqli_query($conn, $query) or die(mysqli_error($conn));
     if (mysqli_affected_rows($conn)) {
         header("location:thanks.php");
@@ -49,7 +49,7 @@ include_once("files.php");
     <!-- breadcrumb -->
     <div class="container">
         <ol class="breadcrumb w3l-crumbs">
-            <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="index.php"><i class="fa fa-home"></i> Home</a></li>
             <li class="active">Billing Info </li>
         </ol>
     </div>
