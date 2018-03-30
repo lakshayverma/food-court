@@ -1,6 +1,15 @@
 <?php
+require_once('includes/logic.php');
+
+if (isset($_POST["continue"])) {
+    header("location:category.php");
+}
+if (isset($_POST["checkout"])) {
+    header("location:checkout.php");
+}
+
+
 ob_start();
-session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +40,7 @@ session_start();
 
             <div class="panel panel-primary">
                 <div class="panel-body">
-                    <div class="row">
+                    <div class="col-md-12">
                         <?php
                         $email = $_SESSION["email"];
                         include_once("connect.php");
@@ -67,33 +76,47 @@ session_start();
                     </div>
                 </div>
                 <div class="panel-footer">
-                    <div class="">
-                        <h3>
-                            Grand Total:
+                    <div class="row">
+                        <div class="col-md-12 text-right">
                             <?php
                                 $qu = mysqli_query($conn, "select sum(totalcost) from cart where uname='$email'") or die(mysqli_error($conn));
                                 $ans = mysqli_fetch_array($qu);
-                                print $ans[0];
-                                $_SESSION["tcost"] = $ans[0];
+                                $tcost = ($ans[0]) ? $ans[0] : 0;
+                                $deliveryCharges = calculateDeliveryCharges($tcost);
+
+                                $finalCost = $tcost + $deliveryCharges;
+                                $_SESSION["tcost"] = $finalCost;
                             ?>
-                        /-
-                        </h3>
-                    </div>
-                    <div class="">
-                        <form method="post">
-                            <div class="btn-group">
-                                <input class="btn btn-success" type="submit" name="checkout" value="Checkout">
-                                <input class="btn btn-primary" type="submit" name="con" value="Continue Shopping">
-                            </div>
-                            <?php
-                            if (isset($_POST["con"])) {
-                                header("location:category.php");
-                            }
-                            if (isset($_POST["checkout"])) {
-                                header("location:checkout.php");
-                            }
-                            ?>
-                        </form>
+                            <table class="table table-condensed table-stripped">
+                                <tr>
+                                    <td>Products Cost</td>
+                                    <td>
+                                        <?php echo formatCurrency($tcost);?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Delivery Charges</td>
+                                    <td>
+                                        <?php echo formatCurrency($deliveryCharges);?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Total Cost</td>
+                                    <td>
+                                        <?php echo formatCurrency($tcost + $deliveryCharges);?>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <hr>
+                        <div class="col-md-12 text-right">
+                            <form method="post">
+                                <div class="btn-group">
+                                    <input class="btn btn-success" type="submit" name="checkout" value="Checkout">
+                                    <input class="btn btn-primary" type="submit" name="continue" value="Continue Shopping">
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -10,20 +10,25 @@ function calculateDeliveryCharges($amount)
 {
     $type = strtolower(getConfigValue('deliveryChargesType'));
     $charges = getConfigValue('deliveryCharges');
-    $totalAmount = 0;
+    $minOrder = getConfigValue('minOrder');
+    $deliveryCharges = 0;
+
+    if ($amount >= $minOrder) {
+        return $deliveryCharges;
+    }
 
     switch ($type) {
         case 'percent':
         case 'percentage':
-            $totalAmount = $amount + (($amount * $charges)/ 100);
+            $deliveryCharges = (($amount * $charges)/ 100);
             break;
 
         default:
-            $totalAmount = $amount + $charges;
+            $deliveryCharges = $charges;
             break;
     }
 
-    return $totalAmount;
+    return $deliveryCharges;
 }
 
 function getSessionValue($key, $default = null)
@@ -68,4 +73,10 @@ function adminsOnly()
     if (! isUser('admin')) {
         header("location:index.php");
     }
+}
+
+
+function formatCurrency($amount)
+{
+    return '₹' . $amount . '/-';
 }

@@ -7,7 +7,10 @@ require_once('includes/logic.php');
         <!-- header-one -->
         <div class="container">
             <div class="w3ls-header-left">
-                <p>Free home delivery at your doorstep For Above ₹<?php echo getConfigValue('minOrder'); ?>/-</p>
+                <p>
+                    Free home delivery at your doorstep
+                    For Above <?php echo formatCurrency(getConfigValue('minOrder')); ?>
+                </p>
             </div>
             <div class="w3ls-header-right">
                 <ul>
