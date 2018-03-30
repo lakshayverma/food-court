@@ -1,8 +1,13 @@
+<?php
+require_once('includes/logic.php');
+?>
+
 <div class="header">
-    <div class="w3ls-header"><!-- header-one -->
+    <div class="w3ls-header">
+        <!-- header-one -->
         <div class="container">
             <div class="w3ls-header-left">
-                <p>Free home delivery at your doorstep For Above ₹300/-</p>
+                <p>Free home delivery at your doorstep For Above ₹<?php echo getConfigValue('minOrder'); ?>/-</p>
             </div>
             <div class="w3ls-header-right">
                 <ul>

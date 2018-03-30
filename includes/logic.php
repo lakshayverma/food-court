@@ -1,5 +1,31 @@
 <?php
-session_start();
+
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+require_once('config.php');
+
+function calculateDeliveryCharges($amount)
+{
+    $type = strtolower(getConfigValue('deliveryChargesType'));
+    $charges = getConfigValue('deliveryCharges');
+    $totalAmount = 0;
+
+    switch ($type) {
+        case 'percent':
+        case 'percentage':
+            $totalAmount = $amount + (($amount * $charges)/ 100);
+            break;
+
+        default:
+            $totalAmount = $amount + $charges;
+            break;
+    }
+
+    return $totalAmount;
+}
+
 
 function isUser($userType = null)
 {
