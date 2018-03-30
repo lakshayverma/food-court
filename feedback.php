@@ -1,5 +1,6 @@
 <?php
-session_start();
+require_once('includes/logic.php');
+
 if (isset($_POST["s1"])) {
     include "connect.php";
     $name=$_POST["name"];
@@ -10,6 +11,10 @@ if (isset($_POST["s1"])) {
 
     $msg="THANKYOU FOR YOUR FEEDBACK";
 }
+
+$userMail = getSessionValue("email", '');
+$userName = getSessionValue("name", '');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,8 +53,8 @@ include_once("files.php");
             <div class="login-agileinfo">
                 <form name="abc" method="post">
                     <p>
-                      <input class="agile-ltext" type="text" name="name" placeholder="Name" required>
-                      <input class="agile-ltext" type="text" name="email" placeholder="E-mail" required>
+                      <input class="agile-ltext" type="text" name="name" placeholder="Name" value="<?php echo $userName; ?>" required>
+                      <input class="agile-ltext" type="text" name="email" placeholder="E-mail" value="<?php echo $userMail; ?>" required>
                   </p>
                   <p>&nbsp;</p>
                     <p>

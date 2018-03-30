@@ -26,6 +26,17 @@ function calculateDeliveryCharges($amount)
     return $totalAmount;
 }
 
+function getSessionValue($key, $default = null)
+{
+    $value = $default;
+
+    if (isset($_SESSION[$key])) {
+        $value = ($_SESSION[$key]) ? $_SESSION[$key] : $default;
+    }
+
+    return $value;
+}
+
 
 function isUser($userType = null)
 {
