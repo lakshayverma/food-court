@@ -1,4 +1,8 @@
 <?php
+require_once('includes/logic.php');
+
+guestsOnly();
+
 if (isset($_POST["s1"])) {
     if (isset($_POST["c1"])) {
         $name = $_POST["name"];
@@ -11,12 +15,13 @@ if (isset($_POST["s1"])) {
             $query = "insert into signup(name,email,pass,phno,utype) values('$name','$email','$pass','$phno','normal')";
             $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 
-            session_start();
-            //mysqli_close($conn);
+            mysqli_close($conn);
+
             $_SESSION["name"] = $name;
             $_SESSION["email"] = $email;
             $_SESSION["utype"] = "normal";
-            //header("location:index.php");
+
+            header("location:index.php");
             $msg = "SIGNED UP SUCCESSFULLY";
         } else {
             $msg = "Passwords Mismatch";

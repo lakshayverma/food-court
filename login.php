@@ -1,5 +1,8 @@
 <?php
-session_start();
+require_once('includes/logic.php');
+
+guestsOnly();
+
 if (isset($_POST["s1"])) {
     $uname=$_POST["uname"];
     $pass=$_POST["pass"];
