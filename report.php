@@ -11,8 +11,7 @@ $to = $time->modify('+1 day')->format('Y-m-d');
 $time = new DateTime('now');
 $from = $time->modify('-1 year')->format('Y-m-d');
 
-$sql = "SELECT pid, sum(qty) orders_qty FROM `orderhistory`";
-
+$sql = "SELECT pid, sum(qty) orders_qty, sum(tcost) orders_cost FROM `orderhistory`";
 if (isset($_POST['filter'])) {
     if(isset($_POST['from']) && isset($_POST['to'])) {
         $from = $_POST['from'];
@@ -29,6 +28,9 @@ $sql .= " group by orderhistory.pid";
 
 $sql .= " order by orders_qty desc";
 $sql .= " limit {$listLimit}";
+
+
+echo $sql;
 
 $result= mysqli_query($conn, $sql);
 
@@ -115,28 +117,47 @@ ob_start();
                 </div>
                 <div class="panel-body">
                     <div class="col-md-12">
-                        <table class="table table-hover table-striped">
+                        <table class="table table-hover table-striped table-bordered">
                             <thead>
                                 <tr>
                                     <th>Image</th>
                                     <th>Name</th>
                                     <th>Quantity Ordered</th>
+                                    <th>Total Cost</th>
                                 </tr>
                             </thead>
 
                             <tbody>
                                 <?php
+                                $totalOrder = 0;
+                                $totalPrice = 0;
                                 foreach ($products as $product) {
+                                    $totalOrder += $product['orders_qty'];
+                                    $totalPrice += $product['orders_cost'];
                                     echo '<tr>';
                                     echo '<td>' . "<img src='product/{$product['image']}' height='90px'>" . '</td>';
                                     echo '<td>' . $product['name'] . '</td>';
                                     echo '<td>' . $product['orders_qty'] . '</td>';
-
+                                    echo '<td>' . formatCurrency($product['orders_cost']) . '</td>';
                                     echo '</tr>';
                                 }
-
                                 ?>
                             </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th  colspan="2">Total</th>
+                                    <th>
+                                        <?php 
+                                        echo $totalOrder;
+                                        ?>
+                                    </th>
+                                    <th>
+                                        <?php 
+                                        echo formatCurrency($totalPrice);
+                                        ?>
+                                    </th>
+                                </tr>
+                            </tfoot>
                         </table>
                     </div>
                 </div>
