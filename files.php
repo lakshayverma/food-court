@@ -6,11 +6,15 @@
 <!-- Custom Theme files -->
 <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/jquery-ui.min.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/jquery-ui.structure.min.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/jquery-ui.theme.min.css" type="text/css" rel="stylesheet" media="all">
 <link href="css/font-awesome.css" rel="stylesheet"> <!-- font-awesome icons -->
 <link rel="stylesheet" href="css/owl.carousel.css" type="text/css" media="all"/> <!-- Owl-Carousel-CSS -->
 <!-- //Custom Theme files -->
 <!-- js -->
 <script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
 <!-- //js -->
 <!-- web-fonts -->
 <link href="css/cssfamily.css" rel="stylesheet">
