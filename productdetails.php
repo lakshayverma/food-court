@@ -59,7 +59,7 @@ ob_start();
                                 </div>
                                 <p class="single-price-text"><?php print $ans[7]; ?></p>
                                 <form method="post">
-                                    <input type="text" name="qty">
+                                    <input type="text" placeholder="Enter quantity" name="qty">
                                     <input type="submit" name="cart" class="w3ls-cart" value="Add To Cart">
                                 </form>
                                 <?php
