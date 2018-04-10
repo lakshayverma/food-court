@@ -96,7 +96,7 @@
                                 <li><a href="viewcontact.php">Contact</a></li>
                             </ul>
                         </li>
-                        <li><a href="addemployee.php">Add Employee</a></li>
+                      
                     </ul>
                 </div>
             </nav>

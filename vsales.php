@@ -2,7 +2,7 @@
 require_once('includes/logic.php');
 include"connect.php";
 adminsOnly();
-$listLimit = 10;
+$listLimit = 25;
 
 $products = [];
 
@@ -11,7 +11,7 @@ $to = $time->modify('+1 day')->format('Y-m-d');
 $time = new DateTime('now');
 $from = $time->modify('-1 year')->format('Y-m-d');
 
-$sql = "SELECT pid, sum(qty) orders_qty, sum(tcost) orders_cost FROM `orderhistory`";
+$sql = "SELECT pid, (qty) orders_qty, (tcost) orders_cost , (created_at) timestam FROM `orderhistory`";
 if (isset($_POST['filter'])) {
     if(isset($_POST['from']) && isset($_POST['to'])) {
         $from = $_POST['from'];
@@ -24,13 +24,11 @@ if ($from && $to) {
 }
 
 
-$sql .= " group by orderhistory.pid";
 
-$sql .= " order by orders_qty desc";
+$sql .= " order by (timestam) ";
 $sql .= " limit {$listLimit}";
 
 
-echo $sql;
 
 $result= mysqli_query($conn, $sql);
 
@@ -89,7 +87,7 @@ ob_start();
 
             <div class="row">
                 <div class="col-md-12">
-                    <h3>Most Popular Products Top 10</h3>
+                    <h3>Total Sales</h3>
                 </div>
             </div>
             <div class="panel panel-danger">
@@ -124,6 +122,7 @@ ob_start();
                                     <th>Name</th>
                                     <th>Quantity Ordered</th>
                                     <th>Total Cost</th>
+                                    <th>Date</th>
                                 </tr>
                             </thead>
 
@@ -139,6 +138,8 @@ ob_start();
                                     echo '<td>' . $product['name'] . '</td>';
                                     echo '<td>' . $product['orders_qty'] . '</td>';
                                     echo '<td>' . formatCurrency($product['orders_cost']) . '</td>';
+                                    echo '<td>' . $product['timestam'] . '</td>';
+
                                     echo '</tr>';
                                 }
                                 ?>

@@ -120,6 +120,20 @@ include_once("files.php");
                         <span>12</span>
                     </div>
                 </div>
+   
+                <div class="clearfix"> </div>
+            <div class="wthree-order">
+              <div class="order-agileinfo">
+                <div class="col-md-3 col-sm-3 col-xs-6 order-w3lsgrids">
+                    <div class="order-w3text">
+                        <i class="fa fa-map" aria-hidden="true"></i>
+                        <h5><a href="vsales.php">View Sales</a></h5>
+                        <span>13</span>
+                    </div>
+                </div>
+                </div>
+              
+   
                 <div class="clearfix"> </div>
             </div>
     </div>

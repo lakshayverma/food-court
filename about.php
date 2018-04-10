@@ -44,14 +44,14 @@ include_once("files.php");
     </div>
     <div>
     </br>
-      <p>FOOD CORNER was founded on 22th MAY, 2013. From our beginnings as a technology company in the online food ordering space to launching apps that can get you food on the go, we&rsquo;ve tried to stay true to our core mission &mdash; changing the way India orders food. And our journey since then has been nothing short of amazing.</p>
+      <p>Staple was founded on 22th MAY, 2013. From our beginnings as a technology company in the online food ordering space to launching apps that can get you food on the go, we&rsquo;ve tried to stay true to our core mission &mdash; changing the way India orders food. And our journey since then has been nothing short of amazing.</p>
      </div>
      <div>
      </br>
      </br>
       <h2><span><center>What We Do</center></span></h2>
     </div>
-    <div><p>FOOD CORNER was created to help foodies like you order your favourite food from the choicest of restaurants, wherever you are. We don't want you to sweat in the kitchen or get stuck in traffic jams, when you could enjoy a lovely meal from the comfort of your home.We pamper your rumbling bellies by assisting you with ordering food on our app and website. With over 3,000 restaurants to order your food online from, 52 cuisines and 3 lakh dishes to choose from, we have simplified the entire process of ordering food online in the country such that a few taps is all it takes to get your food delivered home.</p></div>
+    <div><p>Staple was created to help foodies like you order your favourite food from the choicest of restaurants, wherever you are. We don't want you to sweat in the kitchen or get stuck in traffic jams, when you could enjoy a lovely meal from the comfort of your home.We pamper your rumbling bellies by assisting you with ordering food on our app and website. With over 3,000 restaurants to order your food online from, 52 cuisines and 3 lakh dishes to choose from, we have simplified the entire process of ordering food online in the country such that a few taps is all it takes to get your food delivered home.</p></div>
     <div>
     </br>
     </br>
@@ -96,7 +96,7 @@ include_once("files.php");
       </br>
       <img src="images/about-us-page-image12.png" alt="6" width="79" height="79" /></div>
       <div>
-        <div><p>Save Your Addresses:&nbsp;When you sign up with FOOD CORNER, you have the option of saving your addresses as primary and secondary addresses. So you can choose to add both your office and home address in the preferred sections. When you place an order, your primary address will be populated by default in the address field. In case you want to change it to the secondary address, just click on the option &quot;Use my Secondary Address&quot; that will appear below the populated address.</p></div>
+        <div><p>Save Your Addresses:&nbsp;When you sign up with Staple, you have the option of saving your addresses as primary and secondary addresses. So you can choose to add both your office and home address in the preferred sections. When you place an order, your primary address will be populated by default in the address field. In case you want to change it to the secondary address, just click on the option &quot;Use my Secondary Address&quot; that will appear below the populated address.</p></div>
       </div>
     </div>
     <div>
@@ -107,9 +107,9 @@ include_once("files.php");
     <div>
     </br>
     </br>
-      <h2><span><center>The Food Corner Story</center></span></h2>
+      <h2><span><center>The Staple Story</center></span></h2>
     </div>
-    <div><p>It is said that the best ideas are those that are born out of personal experiences. And it was one such experience from which GAGAN GULATI(the founder and CEO) started FOOD CORNER. With hunger pangs hitting his stomach hard, he searched online for good restaurants to order in from, during a late night working session. But as luck would have it, no such information was available online. And that&rsquo;s how the idea of starting an online food ordering portal came to him.Food Cornerwas launched on 26 July, 2006, with just 15 restaurants on board for the noble cause of waging war against hunger.We received our first round of funding during this time from the Indian Angel Network. This new investment capital helped us gradually expand into other cities and develop our business on a larger scale.On 17th January, 2011, another significant development occurred when we announced our partnership with JUST EAT Group, the leading online portal for ordering food ordering services that operates in 13 countries around the globe, including: Belgium, Brazil, Canada, Denmark, France, Ireland, the Netherlands, Norway, Spain, Sweden, Switzerland and the UK.Today, we have over 3,000 restaurants on board, more than 6 lakh registered users, and some of the brightest minds working for the noble cause.Having the advantage of JUST EAT Group&rsquo;s best practices at our disposal, our strong local knowledge and technical prowess, we believe we are just a few steps away from being present in a customer&rsquo;s life, such that when they think of ordering food, they think Food CORNER</p></div>
+    <div><p>It is said that the best ideas are those that are born out of personal experiences. And it was one such experience from which GAGAN GULATI(the founder and CEO) started Staple. With hunger pangs hitting his stomach hard, he searched online for good restaurants to order in from, during a late night working session. But as luck would have it, no such information was available online. And that&rsquo;s how the idea of starting an online food ordering portal came to him.Staplewas launched on 26 July, 2006, with just 15 restaurants on board for the noble cause of waging war against hunger.We received our first round of funding during this time from the Indian Angel Network. This new investment capital helped us gradually expand into other cities and develop our business on a larger scale.On 17th January, 2011, another significant development occurred when we announced our partnership with JUST EAT Group, the leading online portal for ordering food ordering services that operates in 13 countries around the globe, including: Belgium, Brazil, Canada, Denmark, France, Ireland, the Netherlands, Norway, Spain, Sweden, Switzerland and the UK.Today, we have over 3,000 restaurants on board, more than 6 lakh registered users, and some of the brightest minds working for the noble cause.Having the advantage of JUST EAT Group&rsquo;s best practices at our disposal, our strong local knowledge and technical prowess, we believe we are just a few steps away from being present in a customer&rsquo;s life, such that when they think of ordering food, they think Staple</p></div>
     <div></div>
     <div>
       <p> Our journey has just begun</p>

@@ -8,7 +8,8 @@ if (isset($_POST["s1"])) {
     $message=$_POST["message"];
     $q="insert into contactus(name,email,message) values('$name','$email','$message')";
     $result=mysqli_query($conn, $q) or die(mysqli_error($conn));
-    $msg="THANKYOU FOR YOUR CONTACT";
+$msg="THANKYOU FOR YOUR CONTACT";
+    
 }
 ?>
 <!DOCTYPE html>
@@ -20,6 +21,7 @@ include_once("files.php");
 ?>
 </head>
 <body>
+
     <!-- banner -->
     <div class="banner about-w3bnr">
         <?php
@@ -45,7 +47,7 @@ include_once("files.php");
             <div class="contact-row agileits-w3layouts">
                 <div class="col-xs-6 col-sm-6 contact-w3lsleft">
                     <div class="contact-grid agileits">
-                        <h4>For contect us please send your message </h4>
+                        <h4>Please send your message </h4>
                         <form method="post">
                             <input type="text" name="name" placeholder="Name" required>
                             <input type="email" name="email" placeholder="Email" required>
@@ -67,7 +69,7 @@ include_once("files.php");
                         </div>
                         <div class="col-xs-10 address-right">
                             <h5>Visit Us</h5>
-                            <p>Broome St, Canada, NY 10002, New York </p>
+                            <p>House No 8, Jalandhar Cantt, Punjab 144005</p>
                         </div>
                         <div class="clearfix"> </div>
                     </div>
@@ -77,7 +79,7 @@ include_once("files.php");
                         </div>
                         <div class="col-xs-10 address-right">
                             <h5>Mail Us</h5>
-                            <p><a href="mailto:info@example.com"> www.foodcorner@corner.com</a></p>
+                            <p><a href="mailto:info@example.com"> www.staple@corner.com</a></p>
                         </div>
                         <div class="clearfix"> </div>
                     </div>
@@ -87,7 +89,7 @@ include_once("files.php");
                         </div>
                         <div class="col-xs-10 address-right">
                             <h5>Call Us</h5>
-                            <p>+01 222 333 4444</p>
+                            <p>+91 904 197 2991</p>
                         </div>
                         <div class="clearfix"> </div>
                     </div>

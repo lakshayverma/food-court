@@ -1,6 +1,6 @@
 <?php
 require_once('includes/logic.php');
-
+adminsOnly();
 if (isset($_POST["s1"])) {
     $a = $_POST["name"];
     $b = $_FILES["image"]["name"];

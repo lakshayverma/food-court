@@ -10,26 +10,43 @@ if (isset($_POST["s1"])) {
         $pass = $_POST["pass"];
         $cpass = $_POST["cpass"];
         $phno = $_POST["phno"];
+        $_SESSION['name1'] = $_POST['name'];
+        $_SESSION['email1'] = $_POST['email'];
+        $_SESSION['phno1'] = $_POST['phno'];
+
         if ($pass == $cpass) {
             include "connect.php";
-            $query = "insert into signup(name,email,pass,phno,utype) values('$name','$email','$pass','$phno','normal')";
-            $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+            $emailCheck = "SELECT * FROM signup WHERE email='$email'";
+            $checkEmail =  mysqli_query($conn, $emailCheck) or die(mysqli_error($conn));
+            if (!$checkEmail->num_rows == 0) {
+                $msg2 = "Email Already Exist<br>";
+            }
+            $usernameCheck = "SELECT * FROM signup WHERE name='$name'";
+            $checkUsername =  mysqli_query($conn, $usernameCheck) or die(mysqli_error($conn));  
+            if (!$checkUsername->num_rows == 0) {
+                $msg1 = "Username Already Exist";
+            }             
+            if ($checkEmail->num_rows == 0 && $checkUsername->num_rows == 0) {
+                        $query = "insert into signup(name,email,pass,phno,utype) values('$name','$email','$pass','$phno','normal')";
+                        $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 
-            mysqli_close($conn);
+                        mysqli_close($conn);
 
-            $_SESSION["name"] = $name;
-            $_SESSION["email"] = $email;
-            $_SESSION["utype"] = "normal";
+                        $_SESSION["name"] = $name;
+                        $_SESSION["email"] = $email;
+                        $_SESSION["utype"] = "normal";
 
-            header("location:index.php");
-            $msg = "SIGNED UP SUCCESSFULLY";
+                        header("location:index.php");
+                        $msg = "SIGNED UP SUCCESSFULLY";
+                }
         } else {
-            $msg = "Passwords Mismatch";
+            $msg3 = "Passwords Mismatch";
         }
     } else {
-        $msg = "Please accept the our Terms of Service before continuing";
+        $msg4 = "<br>Please accept our Terms of Service before continuing";
     }
 }
+session_destroy();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -102,11 +119,20 @@ if (isset($_POST["s1"])) {
                 <h3 class="w3ls-title w3ls-title1">Sign Up to your account</h3>
                 <div class="login-agileinfo">
                     <form name="form1" method="post">
-                        <input class="agile-ltext" type="text" name="name" placeholder="Username">
-                        <input class="agile-ltext" type="email" name="email" placeholder="Your Email">
+                        <input class="agile-ltext" type="text" name="name" placeholder="Username" value="<?php if(isset($_SESSION['name1'])){echo $_SESSION['name1'];}else{echo "";} ?>"> 
+                        <?php if (isset($msg1)) {
+                            echo $msg1;
+                        } ?>
+                        <input class="agile-ltext" type="email" name="email" placeholder="Your Email"  value="<?php if(isset($_SESSION['email1'])){echo $_SESSION['email1'];}else{echo "";} ?>">
+                         <?php if (isset($msg2)) {
+                            echo $msg2;
+                        } ?>
                         <input class="agile-ltext" type="password" name="pass" placeholder="Password">
+                        <?php if (isset($msg3)) {
+                            echo $msg3;
+                        } ?>
                         <input class="agile-ltext" type="password" name="cpass" placeholder="Confirm Password">
-                        <input class="agile-ltext" type="text" name="phno" placeholder="Phone No">
+                        <input class="agile-ltext" type="text" name="phno" placeholder="Phone No"  value="<?php if(isset($_SESSION['phno1'])){echo $_SESSION['phno1'];}else{echo "";} ?>">
                         <div class="wthreelogin-text">
                             <ul>
                                 <li>
@@ -114,16 +140,14 @@ if (isset($_POST["s1"])) {
                                         <span> I agree to the terms of service</span>
                                     </label>
                                 </li>
+                      <?php if (isset($msg4)) {
+                            echo $msg4;
+                        } ?>
                             </ul>
                             <div class="clearfix"> </div>
                         </div>
-                        <input type="submit" value="Sign Up" name="s1" onClick="return abc();">
+                        <input type="submit" value="Sign Up" name="s1" ">
                     </form>
-                    <?php
-                    if (isset($msg)) {
-                        print $msg;
-                    }
-                    ?>
                     <p>Already have an account?  <a href="login.php" onClick="abc();"> Login Now!</a></p>
                 </div>
             </div>

@@ -1,6 +1,8 @@
 <?php
 require_once('includes/logic.php');
+adminsOnly();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,27 +29,27 @@ include_once("files.php");
                 include_once("connect.php");
                 $qu=mysqli_query($conn, "select * from contactus order by contactid desc") or die(mysqli_error($conn));
                 if (mysqli_affected_rows($conn)>0) {
-                    print "<table align='center' width='800px'>
+                    print "<table align='center' width='800px' style='border:1px solid black'>
                         <tr bgcolor='#574C44' height='40px'>
                             <td><font color='#FFFFFF'>Name</font></td>
                             <td><font color='#FFFFFF'>Email</font></td>
-                            <td><font color='#FFFFFF'>Message</font></td>
+                            <td ><font color='#FFFFFF'>Message</font></td>
                         </tr>
                     ";
                     $col=1;
                     while ($ans=mysqli_fetch_array($qu)) {
                         if ($col%2==0) {
-                            print "<tr bgcolor='#D1BDBA' height='40px'>
-                            <td>$ans[1]</td>
-                            <td>$ans[2]</td>
-                            <td>$ans[3]</td>
+                            print "<tr bgcolor='#D1BDBA' height='40px'  >
+                            <td >$ans[1]</td>
+                            <td >$ans[2]</td>
+                            <td >$ans[3]</td>
 
                         </tr>";
                         } else {
-                            print "<tr bgcolor='#EC665B' height='40px'>
-                            <td>$ans[1]</td>
-                            <td>$ans[2]</td>
-                            <td>$ans[3]</td>
+                            print "<tr bgcolor='#F0F0F0' height='40px '  >
+                            <td >$ans[1]</td>
+                            <td >$ans[2]</td>
+                            <td >$ans[3]</td>
 
                         </tr>";
                         }
