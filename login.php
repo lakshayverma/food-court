@@ -92,7 +92,7 @@ function abc()
                 <form name="form-login" method="post">
                     <input class="agile-ltext" type="text" name="uname" placeholder="Email">
                     <input class="agile-ltext" type="password" name="pass" placeholder="Password">
-                    <div class="wthreelogin-text">
+                    <div class="wthreelogin-text" style="display:none">
                         <ul>
                             <li>
                                 <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>

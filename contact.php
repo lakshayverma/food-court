@@ -8,8 +8,9 @@ if (isset($_POST["s1"])) {
     $message=$_POST["message"];
     $q="insert into contactus(name,email,message) values('$name','$email','$message')";
     $result=mysqli_query($conn, $q) or die(mysqli_error($conn));
-$msg="THANKYOU FOR YOUR CONTACT";
     
+$msg="Thank you for contacting us";
+   
 }
 ?>
 <!DOCTYPE html>
@@ -56,8 +57,11 @@ include_once("files.php");
                         </form>
                         <?php
                         if (isset($msg)) {
-                            print $msg;
+                            echo "<script type='text/javascript'>alert('{$msg}');</script>"; 
                         }
+                       
+
+
                         ?>
                     </div>
                 </div>

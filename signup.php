@@ -133,10 +133,10 @@ session_destroy();
                         } ?>
                         <input class="agile-ltext" type="password" name="cpass" placeholder="Confirm Password">
                         <input class="agile-ltext" type="text" name="phno" placeholder="Phone No"  value="<?php if(isset($_SESSION['phno1'])){echo $_SESSION['phno1'];}else{echo "";} ?>">
-                        <div class="wthreelogin-text">
+                        <div class="wthreelogin-text" style="display:none" >
                             <ul>
                                 <li>
-                                    <label class="checkbox"><input type="checkbox" name="c1"><i></i>
+                                    <label class="checkbox"><input type="checkbox" name="c1" checked><i></i>
                                         <span> I agree to the terms of service</span>
                                     </label>
                                 </li>
@@ -148,7 +148,7 @@ session_destroy();
                         </div>
                         <input type="submit" value="Sign Up" name="s1" ">
                     </form>
-                    <p>Already have an account?  <a href="login.php" onClick="abc();"> Login Now!</a></p>
+                    <p>Already have an account?  <a href="login.php" > Login Now!</a></p>
                 </div>
             </div>
         </div>
