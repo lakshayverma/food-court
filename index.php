@@ -26,10 +26,10 @@ require_once('includes/logic.php');
         </div>
         <!-- //banner -->
         <!-- add-products -->
-        <div class="add-products">
+        <!-- <div class="add-products">
             <div class="container">
                 <div class="add-products-row">
-                    <?php
+                    <php
                     include_once("connect.php");
                     $qu = mysqli_query($conn, "select * from combopack order by cid desc limit 2") or die(mysqli_error($conn));
                     while ($ans = mysqli_fetch_array($qu)) {
@@ -41,13 +41,13 @@ require_once('includes/logic.php');
                             <h6>Order Now <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h6>
                             </a>
                         </div>
-                        <?php
+                        <php
                     }
                     ?>
                     <div class="clearfix"> </div>
                 </div>
             </div>
-        </div>
+        </div> -->>
         <!-- //add-products -->
         <!-- order -->
         <div class="wthree-order">

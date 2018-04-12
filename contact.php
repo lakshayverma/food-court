@@ -4,7 +4,7 @@ require_once('includes/logic.php');
 if (isset($_POST["s1"])) {
     include "connect.php";
     $name=$_POST["name"];
-    $email=$_POST["email"];
+    $email=$_SESSION["email"];
     $message=$_POST["message"];
     $q="insert into contactus(name,email,message) values('$name','$email','$message')";
     $result=mysqli_query($conn, $q) or die(mysqli_error($conn));
@@ -45,15 +45,47 @@ include_once("files.php");
     <div id="contact" class="contact cd-section">
         <div class="container">
             <h3 class="w3ls-title">Contact us</h3>
-            <div class="contact-row agileits-w3layouts">
+            <div class="contact-row ">
                 <div class="col-xs-6 col-sm-6 contact-w3lsleft">
                     <div class="contact-grid agileits">
                         <h4>Please send your message </h4>
-                        <form method="post">
-                            <input type="text" name="name" placeholder="Name" required>
-                            <input type="email" name="email" placeholder="Email" required>
-                            <textarea name="message" placeholder="Message..." required></textarea>
-                            <input type="submit" name="s1" value="Submit" >
+                        <form method="post"> 
+                           
+
+                         <?php
+                        if (isset($_SESSION["email"])) {
+                            echo ' <input type="text" name="name" placeholder="Name" required>';
+                        } else {
+                            echo ' <input type="text" name="name" placeholder="Name" disabled>';
+                        }
+                        ?>
+                         <?php
+                        if (isset($_SESSION["email"])) {
+                            echo '<input type="email" name="email"  value="Email:' . ucwords($_SESSION["email"]) . '" disabled>';
+                        } else {
+                            echo '<input type="email" name="email" placeholder="Email" disabled>';
+                        }
+                        ?>
+                         <?php
+                        if (isset($_SESSION["email"])) {
+                            echo '<textarea name="message" placeholder="Message..." required></textarea>';
+                        } else {
+                            echo ' <textarea name="message" placeholder="Message..." disabled></textarea>';
+                        }
+                        ?>
+                         <?php
+                        if (isset($_SESSION["email"])) {
+                            echo '   <input type="submit" name="s1" value="Submit" >';
+                        } else {
+                            echo '<span style="
+                            background:  white;
+                        "> <a href="login.php" > Login to send a message</a>';
+                        }
+                        ?>
+
+                        
+                           
+                         
                         </form>
                         <?php
                         if (isset($msg)) {
@@ -101,11 +133,7 @@ include_once("files.php");
                 <div class="clearfix"> </div>
             </div>
         </div>
-        <!-- map -->
-        <div class="map agileits">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.948805392833!2d-73.99619098458929!3d40.71914347933105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a27e2f24131%3A0x64ffc98d24069f02!2sCANADA!5e0!3m2!1sen!2sin!4v1479793484055"></iframe>
-        </div>
-        <!-- //map -->
+        
     </div>
     <!-- //contact -->
     <!-- subscribe -->
